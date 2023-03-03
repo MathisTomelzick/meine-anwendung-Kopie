@@ -1,43 +1,298 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+<html lang="de">
+      <head profile="http://www.w3.org/1999/xhtml/vocab">
+        <link href="/public/calendar.css" rel="stylesheet"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="Generator" content="Drupal 7 (http://drupal.org)">
+      <link rel="shortcut icon" href="https://www.buewi.de/sites/default/files/favicon.ico" type="image/vnd.microsoft.icon">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+        <title>Veranstaltungen | www.buewi.de</title>  
+        <style type="text/css" media="all">
+      @import url("https://www.buewi.de/modules/system/system.base.css?rcsyss");
+      @import url("https://www.buewi.de/modules/system/system.menus.css?rcsyss");
+      @import url("https://www.buewi.de/modules/system/system.messages.css?rcsyss");
+      @import url("https://www.buewi.de/modules/system/system.theme.css?rcsyss");
+      </style>
+      <style type="text/css" media="all">
+      @import url("https://www.buewi.de/sites/all/modules/simplenews/simplenews.css?rcsyss");
+      @import url("https://www.buewi.de/sites/all/modules/calendar/css/calendar_multiday.css?rcsyss");
+      @import url("https://www.buewi.de/modules/comment/comment.css?rcsyss");
+      @import url("https://www.buewi.de/sites/all/modules/date/date_api/date.css?rcsyss");
+      @import url("https://www.buewi.de/sites/all/modules/date/date_popup/themes/datepicker.1.7.css?rcsyss");
+      @import url("https://www.buewi.de/sites/all/modules/date/date_repeat_field/date_repeat_field.css?rcsyss");
+      @import url("https://www.buewi.de/sites/all/modules/domain/domain_nav/domain_nav.css?rcsyss");
+      @import url("https://www.buewi.de/modules/field/theme/field.css?rcsyss");
+      @import url("https://www.buewi.de/sites/all/modules/logintoboggan/logintoboggan.css?rcsyss");
+      @import url("https://www.buewi.de/modules/node/node.css?rcsyss");
+      @import url("https://www.buewi.de/sites/all/modules/relation_add/relation_add.css?rcsyss");
+      @import url("https://www.buewi.de/modules/search/search.css?rcsyss");
+      @import url("https://www.buewi.de/modules/user/user.css?rcsyss");
+      @import url("https://www.buewi.de/sites/all/modules/extlink/extlink.css?rcsyss");
+      @import url("https://www.buewi.de/sites/all/modules/views/css/views.css?rcsyss");
+      @import url("https://www.buewi.de/sites/all/modules/lazyloader/lazyloader.css?rcsyss");
+      @import url("https://www.buewi.de/sites/all/modules/back_to_top/css/back_to_top.css?rcsyss");
+      </style>
+      <style type="text/css" media="all">
+      @import url("https://www.buewi.de/sites/all/modules/cctags/cctags.css?rcsyss");
+      @import url("https://www.buewi.de/sites/all/modules/ckeditor/ckeditor.css?rcsyss");
+      @import url("https://www.buewi.de/sites/all/libraries/colorbox/example4/colorbox.css?rcsyss");
+      @import url("https://www.buewi.de/sites/all/modules/ctools/css/ctools.css?rcsyss");
+      @import url("https://www.buewi.de/sites/all/modules/panels/css/panels.css?rcsyss");
+      @import url("https://www.buewi.de/sites/all/libraries/jquery.selectbox/jquery.selectBox.css?rcsyss");
+      @import url("https://www.buewi.de/sites/all/modules/tagclouds/tagclouds.css?rcsyss");
+      @import url("https://www.buewi.de/sites/all/modules/eu_cookie_compliance/css/eu_cookie_compliance.css?rcsyss");
+      @import url("https://www.buewi.de/sites/all/modules/addtoany/addtoany.css?rcsyss");
+      @import url("https://www.buewi.de/sites/all/libraries/superfish/css/superfish.css?rcsyss");
+      @import url("https://www.buewi.de/sites/default/files/ctools/css/cbebc919c890912558c342fd74e8ae7c.css?rcsyss");
+      </style>
+      <style type="text/css" media="all">
+      @import url("https://www.buewi.de/sites/all/themes/omega/alpha/css/alpha-reset.css?rcsyss");
+      @import url("https://www.buewi.de/sites/all/themes/omega/alpha/css/alpha-mobile.css?rcsyss");
+      @import url("https://www.buewi.de/sites/all/themes/omega/alpha/css/alpha-alpha.css?rcsyss");
+      @import url("https://www.buewi.de/sites/all/themes/omega/omega/css/formalize.css?rcsyss");
+      @import url("https://www.buewi.de/sites/all/themes/omega/omega/css/omega-text.css?rcsyss");
+      @import url("https://www.buewi.de/sites/all/themes/omega/omega/css/omega-branding.css?rcsyss");
+      @import url("https://www.buewi.de/sites/all/themes/omega/omega/css/omega-menu.css?rcsyss");
+      @import url("https://www.buewi.de/sites/all/themes/omega/omega/css/omega-forms.css?rcsyss");
+      @import url("https://www.buewi.de/sites/all/themes/omega/omega/css/omega-visuals.css?rcsyss");
+      @import url("https://www.buewi.de/sites/default/files/fontyourface/font.css?rcsyss");
+      </style>
+      <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Sans:700,regular|Droid+Sans+Mono:regular|Droid+Serif:700,700italic,italic,regular|Lato:100,100italic,300,300italic,700,700italic,900,900italic,italic,regular|Open+Sans+Condensed:300,300italic,700&amp;subset=latin" media="all">
+      <style type="text/css" media="all">
+      @import url("https://www.buewi.de/sites/all/themes/buewi/css/global.css?rcsyss");
+      </style>
+      <style type="text/css" media="all and (min-width: 980px) and (min-device-width: 980px), all and (max-device-width: 1024px) and (min-width: 1024px) and (orientation:landscape)">
+      @import url("https://www.buewi.de/sites/all/themes/buewi/css/buewi-alpha-default.css?rcsyss");
+      @import url("https://www.buewi.de/sites/all/themes/buewi/css/buewi-alpha-default-normal.css?rcsyss");
+      @import url("https://www.buewi.de/sites/all/themes/omega/alpha/css/grid/alpha_default/normal/alpha-default-normal-12.css?rcsyss");
+      </style>
+        <script type="text/javascript" src="https://www.buewi.de/sites/all/modules/jquery_update/replace/jquery/1.7/jquery.min.js?v=1.7.2"></script>
+      <script type="text/javascript" src="https://www.buewi.de/misc/jquery-extend-3.4.0.js?v=1.7.2"></script>
+      <script type="text/javascript" src="https://www.buewi.de/misc/jquery-html-prefilter-3.5.0-backport.js?v=1.7.2"></script>
+      <script type="text/javascript" src="https://www.buewi.de/misc/jquery.once.js?v=1.2"></script>
+      <script type="text/javascript" src="https://www.buewi.de/misc/drupal.js?rcsyss"></script>
+      <script type="text/javascript" src="https://www.buewi.de/sites/all/modules/jquery_update/replace/ui/ui/minified/jquery.ui.effect.min.js?v=1.10.2"></script>
+      <script type="text/javascript" src="https://www.buewi.de/sites/all/modules/eu_cookie_compliance/js/jquery.cookie-1.4.1.min.js?v=1.4.1"></script>
+      <script type="text/javascript" src="https://www.buewi.de/sites/all/modules/jquery_update/replace/misc/jquery.form.min.js?v=2.69"></script>
+      <script type="text/javascript" src="https://www.buewi.de/misc/ajax.js?v=7.89"></script>
+      <script type="text/javascript" src="https://www.buewi.de/sites/all/modules/jquery_update/js/jquery_update.js?v=0.0.1"></script>
+      <script type="text/javascript" src="https://www.buewi.de/sites/all/libraries/jquery/jquery-1.9.0.min.js?rcsyss"></script>
+      <script type="text/javascript" src="https://www.buewi.de/sites/all/modules/views_slideshow_liquid_slider/js/liquidslider.js?rcsyss"></script>
+      <script type="text/javascript" src="https://www.buewi.de/sites/all/modules/jqmulti/js/switch.js?rcsyss"></script>
+      <script type="text/javascript" src="https://www.buewi.de/sites/all/modules/lazyloader/jquery.lazyloader.js?rcsyss"></script>
+      <script type="text/javascript" src="https://www.buewi.de/sites/all/modules/back_to_top/js/back_to_top.js?rcsyss"></script>
+      <script type="text/javascript" src="https://www.buewi.de/sites/all/modules/extlink/extlink.js?rcsyss"></script>
+      <script type="text/javascript" src="https://www.buewi.de/sites/default/files/languages/de_Oc6roJnha7nlzyNgKxbN0y1nnjhupe4RdeRKDgQamcY.js?rcsyss"></script>
+      <script type="text/javascript" src="https://www.buewi.de/sites/all/modules/colorbox/js/colorbox.js?rcsyss"></script>
+      <script type="text/javascript" src="https://www.buewi.de/sites/all/libraries/jquery.selectbox/jquery.selectBox.min.js?rcsyss"></script>
+      <script type="text/javascript" src="https://www.buewi.de/sites/all/modules/selectbox/js/selectbox.js?rcsyss"></script>
+      <script type="text/javascript" src="https://www.buewi.de/sites/all/modules/custom_search/js/custom_search.js?rcsyss"></script>
+      <script type="text/javascript" src="https://www.buewi.de/sites/all/modules/views/js/base.js?rcsyss"></script>
+      <script type="text/javascript" src="https://www.buewi.de/misc/progress.js?v=7.89"></script>
+      <script type="text/javascript">
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
+      </script>
+      <script type="text/javascript" defer="defer" src="https://www.buewi.de/sites/all/modules/eu_cookie_compliance/js/eu_cookie_compliance.js?rcsyss"></script>
+      <script type="text/javascript" src="https://www.buewi.de/sites/all/modules/views_quicksand/views_quicksand_test/views_quicksand_test.js?rcsyss"></script>
+      <script type="text/javascript" src="https://www.buewi.de/sites/all/modules/views/js/ajax_view.js?rcsyss"></script>
+      <script type="text/javascript" src="https://use.typekit.com/zfr0xib.js"></script>
+      <style type="text/css">.tk-museo-slab{font-family:"museo-slab",serif;}</style><style type="text/css">@font-face{font-family:museo-slab;src:url(https://use.typekit.com/af/4d796e/0000000000000000000100fe/21/l?subset_id=2&fvd=n3&v=3) format("woff2"),url(https://use.typekit.com/af/4d796e/0000000000000000000100fe/21/d?subset_id=2&fvd=n3&v=3) format("woff"),url(https://use.typekit.com/af/4d796e/0000000000000000000100fe/21/a?subset_id=2&fvd=n3&v=3) format("opentype");font-weight:300;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:museo-slab;src:url(https://use.typekit.com/af/7a5738/000000000000000000010141/21/l?subset_id=2&fvd=i3&v=3) format("woff2"),url(https://use.typekit.com/af/7a5738/000000000000000000010141/21/d?subset_id=2&fvd=i3&v=3) format("woff"),url(https://use.typekit.com/af/7a5738/000000000000000000010141/21/a?subset_id=2&fvd=i3&v=3) format("opentype");font-weight:300;font-style:italic;font-stretch:normal;font-display:auto;}@font-face{font-family:museo-slab;src:url(https://use.typekit.com/af/344b31/000000000000000000012043/21/l?subset_id=2&fvd=n5&v=3) format("woff2"),url(https://use.typekit.com/af/344b31/000000000000000000012043/21/d?subset_id=2&fvd=n5&v=3) format("woff"),url(https://use.typekit.com/af/344b31/000000000000000000012043/21/a?subset_id=2&fvd=n5&v=3) format("opentype");font-weight:500;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:museo-slab;src:url(https://use.typekit.com/af/056621/00000000000000000000ec08/21/l?subset_id=2&fvd=i5&v=3) format("woff2"),url(https://use.typekit.com/af/056621/00000000000000000000ec08/21/d?subset_id=2&fvd=i5&v=3) format("woff"),url(https://use.typekit.com/af/056621/00000000000000000000ec08/21/a?subset_id=2&fvd=i5&v=3) format("opentype");font-weight:500;font-style:italic;font-stretch:normal;font-display:auto;}@font-face{font-family:museo-slab;src:url(https://use.typekit.com/af/f6b914/000000000000000000011aff/21/l?subset_id=2&fvd=n7&v=3) format("woff2"),url(https://use.typekit.com/af/f6b914/000000000000000000011aff/21/d?subset_id=2&fvd=n7&v=3) format("woff"),url(https://use.typekit.com/af/f6b914/000000000000000000011aff/21/a?subset_id=2&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:museo-slab;src:url(https://use.typekit.com/af/92a387/00000000000000000000ec0a/21/l?subset_id=2&fvd=i7&v=3) format("woff2"),url(https://use.typekit.com/af/92a387/00000000000000000000ec0a/21/d?subset_id=2&fvd=i7&v=3) format("woff"),url(https://use.typekit.com/af/92a387/00000000000000000000ec0a/21/a?subset_id=2&fvd=i7&v=3) format("opentype");font-weight:700;font-style:italic;font-stretch:normal;font-display:auto;}</style><script type="text/javascript">
+      </script>
+      <script type="text/javascript" src="https://www.buewi.de/sites/all/libraries/superfish/jquery.hoverIntent.minified.js?rcsyss"></script>
+      <script type="text/javascript" src="https://www.buewi.de/sites/all/libraries/superfish/sftouchscreen.js?rcsyss"></script>
+      <script type="text/javascript" src="https://www.buewi.de/sites/all/libraries/superfish/sfsmallscreen.js?rcsyss"></script>
+      <script type="text/javascript" src="https://www.buewi.de/sites/all/libraries/superfish/supposition.js?rcsyss"></script>
+      <script type="text/javascript" src="https://www.buewi.de/sites/all/libraries/superfish/superfish.js?rcsyss"></script>
+      <script type="text/javascript" src="https://www.buewi.de/sites/all/libraries/superfish/supersubs.js?rcsyss"></script>
+      <script type="text/javascript" src="https://www.buewi.de/sites/all/modules/superfish/superfish.js?rcsyss"></script>
+      <script type="text/javascript" src="https://www.buewi.de/sites/all/themes/omega/omega/js/jquery.formalize.js?rcsyss"></script>
+      <script type="text/javascript" src="https://www.buewi.de/sites/all/themes/omega/omega/js/omega-mediaqueries.js?rcsyss"></script>
+      <script type="text/javascript">
+      </script>
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-141323442-2"></script>
+      <script>
+      </script>
+        
+        <!-- Global site tag (gtag.js) - Google Analytics
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-8WEYT2EF3C"></script>
+      <script>
+        if(Drupal.eu_cookie_compliance.hasAgreed()){
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-8WEYT2EF3C', { 'anonymize_ip': true });
+        }
+      </script>
+       -->
+    </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <header id="section-header" class="section section-header" style="padding-bottom: 30px;">
+      <div id="zone-branding-wrapper" class="zone-wrapper zone-branding-wrapper clearfix">  
+      <div id="zone-branding" class="zone zone-branding clearfix container-12">
+        <div class="grid-12 region region-branding" id="region-branding">
+      <div class="region-inner region-branding-inner">
+            <div class="block block-imageblock block-1 block-imageblock-1 odd block-without-title" id="block-imageblock-1">
+      <div class="block-inner clearfix">
+                    
+        <div class="content clearfix">
+            <div class="block-image">
+        <a href="/" class="imageblock-link" target="_self"><img class="imageblock-image" typeof="foaf:Image" src="https://www.buewi.de/sites/default/files/imageblock/logo-buewi.png" alt=""></a>  </div>
+    
+        </div>
+      </div>
+    </div>  </div>
+    </div>  </div>
+    </div><div id="zone-menu-wrapper" class="zone-wrapper zone-menu-wrapper clearfix">  
+      <div id="zone-menu" class="zone zone-menu clearfix container-12">
+        <div class="grid-12 region region-menu" id="region-menu">
+      <div class="region-inner region-menu-inner">
+            <div class="block block-superfish block-4 block-superfish-4 odd block-without-title" id="block-superfish-4">
+      <div class="block-inner clearfix">
+                    
+        <div class="content clearfix">
+          <ul id="superfish-4" class="menu sf-menu sf-menu-buewi-hauptmen- sf-horizontal sf-style-none sf-total-items-8 sf-parent-items-6 sf-single-items-2 superfish-processed sf-js-enabled"><li id="menu-5298-4" class="first odd sf-item-1 sf-depth-1 sf-no-children"><a href="/" title="" class="sf-depth-1">Start</a></li><li id="menu-5490-4" class="middle even sf-item-2 sf-depth-1 sf-total-children-6 sf-parent-children-0 sf-single-children-6 menuparent"><a href="/das-buergerhaus" class="sf-depth-1 menuparent">Das Bürgerhaus</a><ul class="sf-hidden" style="float: none; width: 28.6667em;"><li id="menu-5301-4" class="first odd sf-item-1 sf-depth-2 sf-no-children" style="white-space: normal; float: left; width: 100%;"><a href="/das-buergerhaus/ueber-uns" title="Leitfaden unserer Arbeit" class="sf-depth-2" style="float: none; width: auto;">Über uns</a></li><li id="menu-5492-4" class="middle even sf-item-2 sf-depth-2 sf-no-children" style="white-space: normal; float: left; width: 100%;"><a href="/das-buergerhaus/das-team" class="sf-depth-2" style="float: none; width: auto;">Das Team</a></li><li id="menu-5520-4" class="middle odd sf-item-3 sf-depth-2 sf-no-children" style="white-space: normal; float: left; width: 100%;"><a href="/das-buergerhaus/leitbild" class="sf-depth-2" style="float: none; width: auto;">Leitbild</a></li><li id="menu-14392-4" class="middle even sf-item-4 sf-depth-2 sf-no-children" style="white-space: normal; float: left; width: 100%;"><a href="/das-buergerhaus/stiftungsrat-buergerhaus-wilhelmsburg" class="sf-depth-2" style="float: none; width: auto;">Stiftungsrat Bürgerhaus Wilhelmsburg</a></li><li id="menu-6930-4" class="middle odd sf-item-5 sf-depth-2 sf-no-children" style="white-space: normal; float: left; width: 100%;"><a href="/das-b%C3%BCrgerhaus/f%C3%B6rderverein-b%C3%BCrgerhaus-wilhelmsburg-ev" class="sf-depth-2" style="float: none; width: auto;">Förderverein Bürgerhaus Wilhelmsburg e.V.</a></li><li id="menu-18760-4" class="last even sf-item-6 sf-depth-2 sf-no-children" style="white-space: normal; float: left; width: 100%;"><a href="https://www.buewi.de/das-b%C3%BCrgerhaus/foerdermitglied_werden" title="" class="sf-depth-2" style="float: none; width: auto;">Fördermitglied werden</a></li></ul></li><li id="menu-7995-4" class="active-trail middle odd sf-item-3 sf-depth-1 sf-total-children-2 sf-parent-children-0 sf-single-children-2 menuparent"><a href="/veranstaltungen" class="sf-depth-1 menuparent active">Veranstaltungen</a><ul class="sf-hidden" style="float: none; width: 12em; display: block;"><li id="menu-11719-4" class="active-trail first odd sf-item-1 sf-depth-2 sf-no-children" style="white-space: normal; float: left; width: 100%;"><a href="/veranstaltungen" title="" class="sf-depth-2 active" style="float: none; width: auto;">Übersicht</a></li><li id="menu-18753-4" class="last even sf-item-2 sf-depth-2 sf-no-children" style="white-space: normal; float: left; width: 100%;"><a href="https://www.buewi.de/vorverkauf" title="" class="sf-depth-2" style="float: none; width: auto;">Vorverkauf</a></li></ul></li><li id="menu-5521-4" class="middle even sf-item-4 sf-depth-1 sf-total-children-4 sf-parent-children-4 sf-single-children-0 menuparent"><a href="/aktivitaeten" class="sf-depth-1 menuparent">Aktivitäten</a><ul class="sf-hidden" style="float: none; width: 36.2667em;"><li id="menu-5522-4" class="first odd sf-item-1 sf-depth-2" style="white-space: normal; float: left; width: 100%;"><a href="/aktivitaeten/musik-von-den-elbinseln" title="Musikalisches Community Building mit dem 
+    Netzwerk &quot;Musik von den Elbinseln&quot;" class="sf-depth-2" style="float: none; width: auto;">Musik von den Elbinseln</a></li><li id="menu-19207-4" class="middle even sf-item-2 sf-depth-2" style="white-space: normal; float: left; width: 100%;"><a href="/aktivitaeten/zusammmen-fuer-den-stadtteil" class="sf-depth-2" style="float: none; width: auto;">Zusammmen für den Stadtteil</a></li><li id="menu-19206-4" class="middle odd sf-item-3 sf-depth-2" style="white-space: normal; float: left; width: 100%;"><a href="/aktivitaeten/kulturelle-und-mint-bildung-mit-kindern-jugendlichen" class="sf-depth-2" style="float: none; width: auto;">Kulturelle und MINT-Bildung mit Kindern &amp; Jugendlichen</a></li><li id="menu-5533-4" class="last even sf-item-4 sf-depth-2" style="white-space: normal; float: left; width: 100%;"><a href="/aktivitaeten/60plus" class="sf-depth-2" style="float: none; width: auto;">Kulturelle Bildung mit Älteren</a></li></ul></li><li id="menu-5536-4" class="middle odd sf-item-5 sf-depth-1 sf-total-children-5 sf-parent-children-0 sf-single-children-5 menuparent"><a href="/gruppen-0" class="sf-depth-1 menuparent">Gruppen</a><ul class="sf-hidden" style="float: none; width: 27.6em;"><li id="menu-5546-4" class="first odd sf-item-1 sf-depth-2 sf-no-children" style="white-space: normal; float: left; width: 100%;"><a href="/gruppen/bandoneon-orchester" class="sf-depth-2" style="float: none; width: auto;">Bandoneon Orchester</a></li><li id="menu-5547-4" class="middle even sf-item-2 sf-depth-2 sf-no-children" style="white-space: normal; float: left; width: 100%;"><a href="/gruppen/treffpunkte-fuer-seniorinnen-und-senioren" class="sf-depth-2" style="float: none; width: auto;">Treffpunkte für Seniorinnen und Senioren</a></li><li id="menu-11312-4" class="middle odd sf-item-3 sf-depth-2 sf-no-children" style="white-space: normal; float: left; width: 100%;"><a href="/gruppen/insulaner-club-99" class="sf-depth-2" style="float: none; width: auto;">Insulaner "Club 99"</a></li><li id="menu-19208-4" class="middle even sf-item-4 sf-depth-2 sf-no-children" style="white-space: normal; float: left; width: 100%;"><a href="/gruppen/wilhelmsburger-schreibwerkstatt" class="sf-depth-2" style="float: none; width: auto;">Wilhelmsburger Schreibwerkstatt</a></li><li id="menu-19221-4" class="last odd sf-item-5 sf-depth-2 sf-no-children" style="white-space: normal; float: left; width: 100%;"><a href="/gruppen/zumba-gold" class="sf-depth-2" style="float: none; width: auto;">Zumba Gold</a></li></ul></li><li id="menu-5550-4" class="middle even sf-item-6 sf-depth-1 sf-total-children-5 sf-parent-children-2 sf-single-children-3 menuparent"><a href="/vermietung" title="Informationen zur Raumvermietung im Bürgerhaus Wilhelmsburg" class="sf-depth-1 menuparent">Vermietung</a><ul class="sf-hidden" style="float: none; width: 16.8em;"><li id="menu-18634-4" class="first odd sf-item-1 sf-depth-2 sf-no-children" style="white-space: normal; float: left; width: 100%;"><a href="/vermietung/corona" title="Vermietungen im Bürgerhaus Wilhelmsburg in Zeiten von Corona" class="sf-depth-2" style="float: none; width: auto;">Corona</a></li><li id="menu-5551-4" class="middle even sf-item-2 sf-depth-2" style="white-space: normal; float: left; width: 100%;"><a href="/vermietung/die-raeume" title="Informationen Raumausstattung" class="sf-depth-2" style="float: none; width: auto;">Die Räume</a></li><li id="menu-5552-4" class="middle odd sf-item-3 sf-depth-2" style="white-space: normal; float: left; width: 100%;"><a href="/vermietung/preise-bedingungen" title="Mietkonditionen" class="sf-depth-2" style="float: none; width: auto;">Preise &amp; Bedingungen</a></li><li id="menu-5554-4" class="middle even sf-item-4 sf-depth-2 sf-no-children" style="white-space: normal; float: left; width: 100%;"><a href="/vermietung/restaurant-catering" title="WIILD &amp; VEGGIE/ Food For Friends" class="sf-depth-2" style="float: none; width: auto;">Restaurant / Catering</a></li><li id="menu-5555-4" class="last odd sf-item-5 sf-depth-2 sf-no-children" style="white-space: normal; float: left; width: 100%;"><a href="/vermietung/veranstaltungstechnik" title="Lynxx Media Systems" class="sf-depth-2" style="float: none; width: auto;">Veranstaltungstechnik</a></li></ul></li><li id="menu-6365-4" class="middle odd sf-item-7 sf-depth-1 sf-total-children-4 sf-parent-children-3 sf-single-children-1 menuparent"><a href="/presse" class="sf-depth-1 menuparent">Presse</a><ul class="sf-hidden" style="float: none; width: 20.0667em;"><li id="menu-6361-4" class="first odd sf-item-1 sf-depth-2" style="white-space: normal; float: left; width: 100%;"><a href="/presse/veroeffentlichungen" title="Pressemitteilungen und Artikel" class="sf-depth-2" style="float: none; width: auto;">Veröffentlichungen</a></li><li id="menu-6362-4" class="middle even sf-item-2 sf-depth-2 sf-no-children" style="white-space: normal; float: left; width: 100%;"><a href="/presse/aktuelles-pressekit" title="Material (Logos, Fotos, Infotexte) zum Download" class="sf-depth-2" style="float: none; width: auto;">Aktuelles Pressekit</a></li><li id="menu-6363-4" class="middle odd sf-item-3 sf-depth-2" style="white-space: normal; float: left; width: 100%;"><a href="/presse/materialien-zu-den-projekten" class="sf-depth-2" style="float: none; width: auto;">Materialien zu den Projekten</a></li><li id="menu-16515-4" class="last even sf-item-4 sf-depth-2" style="white-space: normal; float: left; width: 100%;"><a href="/presse/presseschau" class="sf-depth-2" style="float: none; width: auto;">Presseschau</a></li></ul></li><li id="menu-5559-4" class="last even sf-item-8 sf-depth-1 sf-no-children"><a href="/kontakt" title="Öffnungszeiten und Anfahrt" class="sf-depth-1">Kontakt</a></li></ul>    </div>
+      </div>
+    </div>  </div>
+    </div>
+      </div>
+    </div></header>
+    <div class="calendar-container">
+      <!-- (A) PERIOD SELECTOR -->
+      <div id="calPeriod">
+        <input id="calBack" type="button" value="<">
+        <select id="calMonth"><option value="0">January</option><option value="1">February</option><option value="2">March</option><option value="3">April</option><option value="4">May</option><option value="5">June</option><option value="6">July</option><option value="7">August</option><option value="8">September</option><option value="9">October</option><option value="10">November</option><option value="11">December</option></select>
+        <input type="number" id="calYear">
+        <input id="calNext" type="button" value=">">
+      </div>
+  
+      <!-- (B) CALENDAR -->
+      <div id="calWrap"><div class="calHead"><div class="calCell">Sun</div><div class="calCell">Mon</div><div class="calCell">Tue</div><div class="calCell">Wed</div><div class="calCell">Thur</div><div class="calCell">Fri</div><div class="calCell">Sat</div></div>
+      <div class="calBody">
+        <div class="calRow"><div class="calCell calBlank"></div><div class="calCell calBlank"></div><div class="calCell calBlank"></div><div class="calCell"><div class="cellDate">1</div></div><div class="calCell calToday"><div class="cellDate">2</div></div><div class="calCell"><div class="cellDate">3</div></div><div class="calCell"><div class="cellDate">4</div></div></div>
+      <div class="calRow"><div class="calCell"><div class="cellDate">5</div></div><div class="calCell"><div class="cellDate">6</div></div><div class="calCell"><div class="cellDate">7</div></div><div class="calCell"><div class="cellDate">8</div></div><div class="calCell"><div class="cellDate">9</div></div><div class="calCell"><div class="cellDate">10</div></div><div class="calCell"><div class="cellDate">11</div></div></div><div class="calRow"><div class="calCell"><div class="cellDate">12</div></div><div class="calCell"><div class="cellDate">13</div></div><div class="calCell"><div class="cellDate">14</div></div><div class="calCell"><div class="cellDate">15</div></div><div class="calCell"><div class="cellDate">16</div></div><div class="calCell"><div class="cellDate">17</div></div><div class="calCell"><div class="cellDate">18</div></div></div><div class="calRow"><div class="calCell"><div class="cellDate">19</div></div><div class="calCell"><div class="cellDate">20</div></div><div class="calCell"><div class="cellDate">21</div></div><div class="calCell"><div class="cellDate">22</div></div><div class="calCell"><div class="cellDate">23</div></div><div class="calCell"><div class="cellDate">24</div></div><div class="calCell"><div class="cellDate">25</div></div></div><div class="calRow"><div class="calCell"><div class="cellDate">26</div></div><div class="calCell"><div class="cellDate">27</div></div><div class="calCell"><div class="cellDate">28</div></div><div class="calCell"><div class="cellDate">29</div></div><div class="calCell"><div class="cellDate">30</div></div><div class="calCell"><div class="cellDate">31</div></div><div class="calCell calBlank"></div></div></div></div>
+  
+      <!-- (C) EVENT FORM -->
+      <dialog id="calForm"><form method="dialog">
+        <div id="evtClose">X</div>
+        <h2>Event Übersicht</h2>
+        <label>Datum</label>
+        <input type="text" id="evtDate" readonly="">
+        <label>Events</label>
+        <div class="tooltip-container">
+        <div class="entry-tooltip">
+          <p>48h Wilhelmsburg</p>
+          <p>11.06.23 - 13.06.23</p>
+          <p>www.example.com</p>
+        </div>
+        <div class="entry-tooltip">
+          <p>48h Wilhelmsburg</p>
+          <p>11.06.23 - 13.06.23</p>
+          <p>www.example.com</p>
+        </div>
+        </div>
+  
+        <input id="evtDel" type="button" value="Delete">
+        <input id="evtSave" type="submit" value="Save">
+      </form></dialog>
+    </div>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+      <footer id="section-footer" class="section section-footer">
+        <div id="zone-footer-wrapper" class="zone-wrapper zone-footer-wrapper clearfix">  
+        <div id="zone-footer" class="zone zone-footer clearfix container-12">
+          <div class="grid-12 region region-footer-first" id="region-footer-first">
+        <div class="region-inner region-footer-first-inner">
+          <section class="block block-menu-block block-6 block-menu-block-6 odd" id="block-menu-block-6">
+        <div class="block-inner clearfix">
+                    <h2 class="block-title"><a href="/vermietung" title="Informationen zur Raumvermietung im Bürgerhaus Wilhelmsburg" class="sf-depth-1 menuparent">Vermietung</a></h2>
+                  
+          <div class="content clearfix">
+            <div class="menu-block-wrapper menu-block-6 menu-name-menu-buewi-hauptmen- parent-mlid-5550 menu-level-1">
+        <ul class="menu"><li class="first leaf menu-mlid-18634"><a href="/vermietung/corona" title="Vermietungen im Bürgerhaus Wilhelmsburg in Zeiten von Corona" class="sf-depth-2">Corona</a></li>
+      <li class="leaf has-children menu-mlid-5551"><a href="/vermietung/die-raeume" title="Informationen Raumausstattung" class="sf-depth-2">Die Räume</a></li>
+      <li class="leaf has-children menu-mlid-5552"><a href="/vermietung/preise-bedingungen" title="Mietkonditionen" class="sf-depth-2">Preise &amp; Bedingungen</a></li>
+      <li class="leaf menu-mlid-5554"><a href="/vermietung/restaurant-catering" title="WIILD &amp; VEGGIE/ Food For Friends" class="sf-depth-2">Restaurant / Catering</a></li>
+      <li class="last leaf menu-mlid-5555"><a href="/vermietung/veranstaltungstechnik" title="Lynxx Media Systems" class="sf-depth-2">Veranstaltungstechnik</a></li>
+      </ul></div>
+          </div>
+        </div>
+      </section><section class="block block-menu-block block-1 block-menu-block-1 even" id="block-menu-block-1">
+        <div class="block-inner clearfix">
+                    <h2 class="block-title"><a href="/das-buergerhaus" class="sf-depth-1 menuparent">Das Bürgerhaus</a></h2>
+                  
+          <div class="content clearfix">
+            <div class="menu-block-wrapper menu-block-1 menu-name-menu-buewi-hauptmen- parent-mlid-5490 menu-level-1">
+        <ul class="menu"><li class="first leaf menu-mlid-5301"><a href="/das-buergerhaus/ueber-uns" title="Leitfaden unserer Arbeit" class="sf-depth-2">Über uns</a></li>
+      <li class="leaf menu-mlid-5492"><a href="/das-buergerhaus/das-team" class="sf-depth-2">Das Team</a></li>
+      <li class="leaf menu-mlid-5520"><a href="/das-buergerhaus/leitbild" class="sf-depth-2">Leitbild</a></li>
+      <li class="leaf menu-mlid-14392"><a href="/das-buergerhaus/stiftungsrat-buergerhaus-wilhelmsburg" class="sf-depth-2">Stiftungsrat Bürgerhaus Wilhelmsburg</a></li>
+      <li class="leaf menu-mlid-6930"><a href="/das-b%C3%BCrgerhaus/f%C3%B6rderverein-b%C3%BCrgerhaus-wilhelmsburg-ev" class="sf-depth-2">Förderverein Bürgerhaus Wilhelmsburg e.V.</a></li>
+      <li class="last leaf menu-mlid-18760"><a href="https://www.buewi.de/das-b%C3%BCrgerhaus/foerdermitglied_werden" title="">Fördermitglied werden</a></li>
+      </ul></div>
+          </div>
+        </div>
+      </section><section class="block block-menu-block block-3 block-menu-block-3 odd" id="block-menu-block-3">
+        <div class="block-inner clearfix">
+                    <h2 class="block-title"><a href="/aktivitaeten" class="sf-depth-1 menuparent">Aktivitäten</a></h2>
+                  
+          <div class="content clearfix">
+            <div class="menu-block-wrapper menu-block-3 menu-name-menu-buewi-hauptmen- parent-mlid-5521 menu-level-1">
+        <ul class="menu"><li class="first collapsed menu-mlid-5522"><a href="/aktivitaeten/musik-von-den-elbinseln" title="Musikalisches Community Building mit dem 
+      Netzwerk &quot;Musik von den Elbinseln&quot;" class="sf-depth-2">Musik von den Elbinseln</a></li>
+      <li class="collapsed menu-mlid-19207"><a href="/aktivitaeten/zusammmen-fuer-den-stadtteil" class="sf-depth-2">Zusammmen für den Stadtteil</a></li>
+      <li class="collapsed menu-mlid-19206"><a href="/aktivitaeten/kulturelle-und-mint-bildung-mit-kindern-jugendlichen" class="sf-depth-2">Kulturelle und MINT-Bildung mit Kindern &amp; Jugendlichen</a></li>
+      <li class="last collapsed menu-mlid-5533"><a href="/aktivitaeten/60plus" class="sf-depth-2">Kulturelle Bildung mit Älteren</a></li>
+      </ul></div>
+          </div>
+        </div>
+      </section><section class="block block-menu-block block-5 block-menu-block-5 even" id="block-menu-block-5">
+        <div class="block-inner clearfix">
+                    <h2 class="block-title"><a href="/gruppen-0" class="sf-depth-1 menuparent">Gruppen</a></h2>
+                  
+          <div class="content clearfix">
+            <div class="menu-block-wrapper menu-block-5 menu-name-menu-buewi-hauptmen- parent-mlid-5536 menu-level-1">
+        <ul class="menu"><li class="first leaf menu-mlid-5546"><a href="/gruppen/bandoneon-orchester" class="sf-depth-2">Bandoneon Orchester</a></li>
+      <li class="leaf menu-mlid-5547"><a href="/gruppen/treffpunkte-fuer-seniorinnen-und-senioren" class="sf-depth-2">Treffpunkte für Seniorinnen und Senioren</a></li>
+      <li class="leaf menu-mlid-11312"><a href="/gruppen/insulaner-club-99" class="sf-depth-2">Insulaner "Club 99"</a></li>
+      <li class="leaf menu-mlid-19208"><a href="/gruppen/wilhelmsburger-schreibwerkstatt" class="sf-depth-2">Wilhelmsburger Schreibwerkstatt</a></li>
+      <li class="last leaf menu-mlid-19221"><a href="/gruppen/zumba-gold" class="sf-depth-2">Zumba Gold</a></li>
+      </ul></div>
+          </div>
+        </div>
+      </section><div class="block block-menu-block block-9 block-menu-block-9 odd block-without-title" id="block-menu-block-9">
+        <div class="block-inner clearfix">
+                      
+          <div class="content clearfix">
+            <div class="menu-block-wrapper menu-block-9 menu-name-menu-buewi-footermen-2 parent-mlid-0 menu-level-1">
+        <ul class="menu"><li class="first leaf active-trail active menu-mlid-6588"><a href="/veranstaltungen" title="" class="active-trail active">Veranstaltungen</a></li>
+      <li class="leaf menu-mlid-6589"><a href="/presse" title="">Presse</a></li>
+      <li class="leaf menu-mlid-6590"><a href="/kontakt" title="">Kontakt</a></li>
+      <li class="last leaf menu-mlid-18758"><a href="/presse/buewi-newsletter-anmelden-und-informiert-bleiben" title="">Newsletter</a></li>
+      </ul></div>
+          </div>
+        </div>
+      </div>  </div>
+      </div><div class="grid-12 region region-footer-second" id="region-footer-second">
+        <div class="region-inner region-footer-second-inner">
+          <div class="block block-block block-11 block-block-11 odd block-without-title" id="block-block-11">
+        <div class="block-inner clearfix">
+                      
+          <div class="content clearfix">
+            <p>© 2018 Bürgerhaus Wilhelmsburg</p>
+          </div>
+        </div>
+      </div><div class="block block-menu block-menu-buewi-footermen- block-menu-menu-buewi-footermen- even block-without-title" id="block-menu-menu-buewi-footermen-">
+        <div class="block-inner clearfix">
+                      
+          <div class="content clearfix">
+            <ul class="menu"><li class="first leaf"><a href="/kontakt/impressum" title="">Impressum</a></li>
+      <li class="last leaf"><a href="/datenschutz" title="">Datenschutzerklärung</a></li>
+      </ul>    </div>
+        </div>
+      </div>  </div>
+      </div>  </div>
+      </div></footer>
+    
   </body>
+  <script src="/public/calendar.js"></script>
 </html>
